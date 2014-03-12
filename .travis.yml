@@ -1,15 +1,15 @@
 language: node_js
 node_js:
-- '0.10'
+  - '0.10'
 before_install:
-- gem install sass compass
-- sass --version
+  - gem install sass compass
+  - sass --version
 branches:
   except:
-  - gh-pages
+    - gh-pages
 env:
   global:
-  - REPO="git@github.com:jessy1092/env.g0v.tw"
-  - secure: iODsLZ4OBgJidXm8IgQaLKvW4fL9jmP9WTkgNm17qLOoxI6ONCZnq+ADQRiD2XKCAQQmYNnR/Dp7bDUtu6ldAVkFMaUcaof88/FR6rA8aXNjQVI2wuLyZwzzUH07Yy7I3nAAWgq8QUdzp3pimyR4Dmrq52koW7Q+Vt7y3e2t+AU=
+    - REPO="git@github.com:jessy1092/env.g0v.tw"
+    - secure: "iODsLZ4OBgJidXm8IgQaLKvW4fL9jmP9WTkgNm17qLOoxI6ONCZnq+ADQRiD2XKCAQQmYNnR/Dp7bDUtu6ldAVkFMaUcaof88/FR6rA8aXNjQVI2wuLyZwzzUH07Yy7I3nAAWgq8QUdzp3pimyR4Dmrq52koW7Q+Vt7y3e2t+AU="
 
 after_success: .travis/after_success.sh

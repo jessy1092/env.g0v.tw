@@ -1,12 +1,22 @@
 language: node_js
+
 node_js:
   - '0.10'
+
 before_install:
   - gem install sass compass
   - sass --version
+
+before_script:
+  - npm install -g gulp
+
+script:
+  - gulp --require LiveScript
+
 branches:
   except:
     - gh-pages
+
 env:
   global:
     - REPO="git@github.com:jessy1092/env.g0v.tw"

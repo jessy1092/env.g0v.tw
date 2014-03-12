@@ -201,10 +201,9 @@ set-metric = (name) ->
     ..enter!append \text
       .attr \x 80 + x-off
       .attr \y 195 + y-off
-      .text 'g0v.tw' 
+      .text 'g0v.tw'
       .style \fill \#000000
       .style \font-size \10px
-
   draw-heatmap stations
 
 draw-segment = (d, i) ->

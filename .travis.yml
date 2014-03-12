@@ -11,7 +11,7 @@ before_script:
   - npm install -g gulp
 
 script:
-  - gulp --require LiveScript
+  - gulp --require LiveScript build
 
 branches:
   except:

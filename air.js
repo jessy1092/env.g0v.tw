@@ -104,7 +104,7 @@
       });
     };
     setMetric = function(name){
-      var ref$, y, xOff, yOff, x$;
+      var ref$, y, xOff, yOff, x$, y$;
       currentMetric = name;
       colorOf = d3.scale.linear().domain((ref$ = metrics[name].domain) != null
         ? ref$
@@ -126,6 +126,9 @@
       }).attr('d', '.35em').text(function(){
         return arguments[0] + currentUnit;
       }).style('fill', '#AAAAAA').style('font-size', '10px');
+      y$ = svg.selectAll("image").data([0]);
+      y$.enter().append('svg:image').attr('xlink:href', '/img/g0v-only.svg').attr('x', 20 + xOff).attr('y', -10 + yOff).attr('width', 60).attr('height', 30);
+      y$.enter().append('text').attr('x', 80 + xOff).attr('y', 195 + yOff).text('g0v.tw').style('fill', '#000000').style('font-size', '10px');
       return drawHeatmap(stations);
     };
     drawSegment = function(d, i){
@@ -295,7 +298,7 @@
           res$[e.SiteName] = e;
         }
         epaData = res$;
-        setMetric('PM10');
+        setMetric('PM2.5');
         $('.psi').click(function(){
           return setMetric('PSI');
         });

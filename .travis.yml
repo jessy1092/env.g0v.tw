@@ -8,6 +8,7 @@ before_install:
   - sass --version
 
 before_script:
+  - chmod +x .travis/after_success.sh
   - npm install -g gulp
 
 script:
